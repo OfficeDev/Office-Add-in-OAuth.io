@@ -50,7 +50,8 @@ Set the certificate to be a trusted root authority. On a Windows machine, these 
 
 ## Download the OAuth.io JavaScript Library
 
-1. Download the OAuth.io JavaScript library from [oauth-js](https://github.com/oauth-io/oauth-js).
+2. In the project, create a subfolder called OAuth.io under the Scripts folder.
+3. Download the OAuth.io JavaScript library from [oauth-js](https://github.com/oauth-io/oauth-js).
 2. From the \dist folder of the library, copy either oauth.js or oauth.min.js to the \Scripts\OAuth.io folder of the project. 
 3. If you chose oauth.min.js in the preceding step, open the file \Scripts\popupRedirect.js and change the line `url: 'Scripts/OAuth.io/oauth.js',` to `url: 'Scripts/OAuth.io/oauth.min.js',`.
 
