@@ -6,7 +6,7 @@ The OAuth.io service simplifies the process of getting OAuth 2.0 access tokens f
 * [Change History](#change-history)
 * [Prerequisites](#prerequisites)
 * [Configure the project](#configure-the-project)
-* [Download and modify the OAuth.io JavaScript Library](#download-and-modify-the-oauth.io-javascript-library)
+* [Download the OAuth.io JavaScript Library](#download-the-oauth.io-javascript-library)
 * [Create a Google project](#create-a-google-project)
 * [Create a Facebook app](#create-a-facebook-app)
 * [Create an OAuth.io app and configure it to use Google and Facebook](#create-an-OAuth.io-app-and-configure-it-to-use-google-and-facebook)
