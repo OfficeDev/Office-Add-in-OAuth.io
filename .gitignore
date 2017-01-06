@@ -56,6 +56,8 @@ obj/**
 bld/**
 bin/**
 .vscode/**
+Scripts/OAuth.io/**
+
 
 # Ignore the cert and key file
 *.crt

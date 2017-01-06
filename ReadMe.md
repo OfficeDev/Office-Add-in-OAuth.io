@@ -6,10 +6,10 @@ The OAuth.io service simplifies the process of getting OAuth 2.0 access tokens f
 * [Change History](#change-history)
 * [Prerequisites](#prerequisites)
 * [Configure the project](#configure-the-project)
-* [Download the OAuth.io JavaScript Library](#download-the-oauth.io-javascript-library)
+* [Download the OAuth.io JavaScript Library](#download-the-oauth-io-javascript-library)
 * [Create a Google project](#create-a-google-project)
 * [Create a Facebook app](#create-a-facebook-app)
-* [Create an OAuth.io app and configure it to use Google and Facebook](#create-an-OAuth.io-app-and-configure-it-to-use-google-and-facebook)
+* [Create an OAuth.io app and configure it to use Google and Facebook](#create-an-OAuth-io-app-and-configure-it-to-use-google-and-facebook)
 * [Add the public key to the sample code](#add-the-public-key-to-the-sample-code)
 * [Deploy the add-in](#deploy-the-add-in)
 * [Run the project](#run-the-project)
@@ -51,7 +51,8 @@ Set the certificate to be a trusted root authority. On a Windows machine, these 
 ## Download the OAuth.io JavaScript Library
 
 1. Download the OAuth.io JavaScript library from [oauth-js](https://github.com/oauth-io/oauth-js).
-2. From the \dist folder of the library, copy either oauth.js or oauth.min.js to the \Scripts\OAuth.io folder of the project.
+2. From the \dist folder of the library, copy either oauth.js or oauth.min.js to the \Scripts\OAuth.io folder of the project. 
+3. If you chose oauth.min.js in the preceding step, open the file \Scripts\popupRedirect.js and change the line `url: 'Scripts/OAuth.io/oauth.js',` to `url: 'Scripts/OAuth.io/oauth.min.js',`.
 
 ## Create a Google project
 
