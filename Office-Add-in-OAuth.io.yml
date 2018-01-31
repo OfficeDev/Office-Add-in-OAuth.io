@@ -1,0 +1,20 @@
+### YamlMime:Sample
+sample:
+- name: Office Add-in that uses the OAuth.io Service to get Authorization to External Services
+  path: ''
+  description: The OAuth.io service simplifies the process of getting OAuth 2.0 access tokens from popular online services such as Facebook and Google. This sample shows how to use it in an Office add-in.
+  readme: ''
+  generateZip: FALSE
+  isLive: TRUE
+  technologies:
+  - Office Add-in
+  azureDeploy: ''
+  author: rick-kirkham
+  platforms: []
+  languages:
+  - JavaScript
+  - Node.js
+  extensions:
+    products:
+    - Word
+    scenarios: []
