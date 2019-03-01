@@ -1,4 +1,6 @@
-# Office Add-in that uses the OAuth.io Service to get Authorization to External Services
+# [ARCHIVED] Office Add-in that uses the OAuth.io Service to get Authorization to External Services
+
+> **Note:** This repo is archived and no longer actively maintained. Security vulnerabilities may exist in the project, or its dependencies. If you plan to reuse or run any code from this repo, be sure to perform appropriate security checks on the code or dependencies first. Do not use this project as the starting point of a production Office Add-in. Always start your production code by using the Office/SharePoint development workload in Visual Studio, or the [Yeoman generator for Office Add-ins](https://github.com/OfficeDev/generator-office), and follow security best practices as you develop the add-in.
 
 The OAuth.io service simplifies the process of getting OAuth 2.0 access tokens from popular online services such as Facebook and Google. This sample shows how to use it in an Office add-in. 
 
