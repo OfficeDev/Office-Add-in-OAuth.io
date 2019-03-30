@@ -1,4 +1,6 @@
-# <a name="office-add-in-that-uses-the-oauthio-service-to-get-authorization-to-external-services"></a>Complément Office utilisant le service OAuth.io en vue d’obtenir une autorisation pour les services externes
+# <a name="archived-office-add-in-that-uses-the-oauthio-service-to-get-authorization-to-external-services"></a>[ARCHIVÉ] Complément Office utilisant le service OAuth.io en vue d’obtenir une autorisation pour les services externes
+
+> **Remarque :** Cette repo est archivée et n’est plus activement conservée. Les failles de sécurité peuvent exister dans le projet ou ses dépendances. Si vous envisagez de réutiliser ou exécutez n’importe quel code à partir de cette emprunteuses, veillez à effectuer les vérifications de sécurité appropriés sur le code ou des dépendances tout d’abord. N’utilisez pas ce projet comme point de départ d’un complément Office de production. Commencez toujours votre code de production à l’aide de la charge de travail de développement Office/SharePoint dans Visual Studio, ou le [générateur Yeoman de compléments Office](https://github.com/OfficeDev/generator-office), puis suivez les meilleures pratiques de sécurité lorsque vous développez le complément.
 
 Le service OAuth.io simplifie le processus d’obtention de jetons d’accès OAuth 2.0 à partir de services en ligne populaires, tels que Facebook et Google. Cet exemple présente son utilisation dans un complément Office. 
 
@@ -28,8 +30,8 @@ Le service OAuth.io simplifie le processus d’obtention de jetons d’accès 
 
 * Un compte avec [OAuth.io](https://oauth.io/home)
 * Des comptes de développeur avec [Google](https://developers.google.com/) et [Facebook](https://developers.facebook.com/)
-* Word 2016 pour Windows, version 16.0.6727.1000 ou ultérieure
-* [Nœud et npm](https://nodejs.org/en/) Le projet est configuré pour utiliser npm à la fois comme gestionnaire de package et exécuteur de tâches. Il est également configuré pour utiliser Lite Server en tant que serveur web hébergeant le complément lors du développement, afin que le complément soit rapidement opérationnel. N’hésitez pas à utiliser un autre exécuteur de tâches ou serveur web.
+* Word 2016 pour Windows, version 16.0.6727.1000 ou ultérieure.
+* [Node et npm](https://nodejs.org/en/) Le projet est configuré pour utiliser npm à la fois comme gestionnaire de package et exécuteur de tâches. Il est également configuré pour utiliser Lite Server en tant que serveur web hébergeant le complément lors du développement, afin que le complément soit rapidement opérationnel. N’hésitez pas à utiliser un autre exécuteur de tâches ou serveur web.
 * [GIT Bash](https://git-scm.com/downloads) (ou un autre client Git)
 
 ## <a name="configure-the-project"></a>Configurer le projet
@@ -84,7 +86,7 @@ L’API `OAuth.initialize` est appelée dans le fichier popup.js. Recherchez l
 
 Vous devez maintenant indiquer à Microsoft Word où trouver le complément.
 
-1. Créez un partage réseau, ou [partagez un dossier sur le réseau](https://technet.microsoft.com/en-us/library/cc770880.aspx).
+1. Créez un partage réseau, ou [partagez un dossier sur le réseau](https://technet.microsoft.com/fr-fr/library/cc770880.aspx).
 2. Placez une copie du fichier manifeste Office-Add-in-OAuth.io.xml, depuis la racine du projet, dans le dossier partagé.
 3. Lancez Word et ouvrez un document.
 4. Choisissez l’onglet **Fichier**, puis choisissez **Options**.
@@ -94,12 +96,12 @@ Vous devez maintenant indiquer à Microsoft Word où trouver le complément.
 8. Activez la case à cocher **Afficher dans le menu**, puis cliquez sur **OK**.
 9. Un message vous informe que vos paramètres seront appliqués lors du prochain démarrage de Microsoft Office. Fermez Word.
 
-## <a name="run-the-project"></a>Exécuter le projet
+## <a name="run-the-project"></a>Exécution du projet
 
 1. Ouvrez une fenêtre de commande de nœud dans le dossier du projet et exécutez ```npm start``` pour démarrer le service web. Laissez la fenêtre de commande ouverte.
-2. Ouvrez Internet Explorer ou Edge et tapez ```https://localhost:3000``` dans la zone d’adresse. Si vous ne recevez aucun avertissement concernant le certificat, fermez le navigateur et passez à la section suivante intitulée **Démarrer le complément**. Si vous recevez un message d’avertissement indiquant que le certificat n’est pas approuvé, passez aux étapes suivantes :
+2. Ouvrez Internet Explorer ou Edge, et saisissez ```https://localhost:3000``` dans la zone d’adresse. Si vous ne recevez aucun avertissement concernant le certificat, fermez le navigateur et passez à la section suivante intitulée **Démarrer le complément**. Si vous recevez un message d’avertissement indiquant que le certificat n’est pas approuvé, passez aux étapes suivantes :
 3. Le navigateur vous fournit un lien vous permettant d’ouvrir la page malgré l’avertissement. Ouvrez-la.
-4. Une fois la page ouverte, une erreur de certificat rouge sera indiquée dans la barre d’adresses. Double-cliquez sur l’erreur.
+4. Une fois la page ouverte, une erreur de certificat affichée en rouge apparaît dans la barre d’adresses. Double-cliquez sur l’erreur.
 5. Sélectionnez **Afficher le certificat**.
 5. Sélectionnez **Installer le certificat**.
 4. Sélectionnez **Ordinateur local** et choisissez **Suivant** pour continuer. 
@@ -130,12 +132,12 @@ Vous devez maintenant indiquer à Microsoft Word où trouver le complément.
 
 Nous serions ravis de connaître votre opinion sur cet exemple. Vous pouvez nous envoyer vos commentaires via la section *Problèmes* de ce référentiel.
 
-Les questions générales sur le développement de Microsoft Office 365 doivent être publiées sur [Stack Overflow](http://stackoverflow.com/questions/tagged/office-js+API). Si votre question concerne les API Office JavaScript, assurez-vous qu’elle est marquée avec les balises [office js] et [API].
+Les questions générales sur le développement de Microsoft Office 365 doivent être publiées sur [Stack Overflow](http://stackoverflow.com/questions/tagged/office-js+API). Si votre question concerne les API Office JavaScript, assurez-vous qu’elle comporte les balises [office-js] et [API].
 
 ## <a name="additional-resources"></a>Ressources supplémentaires
 
-* 
-  [Documentation de complément Office](https://msdn.microsoft.com/en-us/library/office/jj220060.aspx)
+* 
+  [Documentation de complément Office](https://msdn.microsoft.com/fr-fr/library/office/jj220060.aspx)
 * [Centre de développement Office](http://dev.office.com/)
 * Plus d’exemples de complément Office sur [OfficeDev sur Github](https://github.com/officedev)
 

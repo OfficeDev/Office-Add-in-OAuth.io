@@ -1,6 +1,8 @@
-# <a name="office-add-in-that-uses-the-oauthio-service-to-get-authorization-to-external-services"></a>Office 外接程序使用 OAuth.io 服务来获取外部服务的授权
+# <a name="archived-office-add-in-that-uses-the-oauthio-service-to-get-authorization-to-external-services"></a>[已存档] Office 外接程序使用 OAuth.io 服务来获取外部服务的授权
 
-OAuth.io 服务简化了从热门联机服务（如 Facebook 和 Google） 获取 OAuth 2.0 访问令牌的过程。本示例介绍如何在 Office 外接程序中使用它。 
+> **注意：** 此存储库已存档，不再主动维护。 项目或其依赖项中可能存在安全漏洞。 如果计划从此存储库重用或运行任何代码，请务必首先对代码或依赖项执行适当的安全检查。 请勿将此项目用作生产 Office 外接程序的起点。 始终使用 Visual Studio 中的 Office/SharePoint 开发工作负载或 [Office 外接程序的 Yeoman 生成器](https://github.com/OfficeDev/generator-office)启动生产代码，并在开发外接程序时遵循安全最佳做法。
+
+OAuth.io 服务简化了从热门联机服务（如 Facebook 和 Google） 获取 OAuth 2.0 访问令牌的过程。本示例介绍如何在 Office 外接程序中使用它。本示例介绍如何在 Office 外接程序中使用它。 
 
 ## <a name="table-of-contents"></a>目录
 * [修订记录](#change-history)
@@ -72,7 +74,7 @@ OAuth.io 服务简化了从热门联机服务（如 Facebook 和 Google） 获�
 ## <a name="create-an-oauthio-app-and-configure-it-to-use-google-and-facebook"></a>创建一个 OAuth.io 应用，并将其配置为使用 Google 和 Facebook
 
 1. 在你的 OAuth.io 仪表板中，创建一个应用，并记下 OAuth.io 向其分配的**公钥**。
-3. 如果尚不存在，则将 `localhost` 添加到应用的白名单 URL 中。
+3. 如果尚不存在，则将 `localhost` 添加到应用的允许列表 URL 中。
 2. 将 **Google Plus** 作为提供程序（也称为“集成 API”）添加到应用中。填写在创建 Google 项目时获取的客户端 ID 和密码，然后将 `profile` 指定为**范围**。如果在 IE 中未保存对提供程序（集成 API）的配置，请尝试在其他浏览器中重新打开 OAuth.io 仪表板。
 3. 对 **Facebook** 重复上述步骤，但将 `user_about_me` 指定为**范围**。
 
@@ -84,7 +86,7 @@ OAuth.io 服务简化了从热门联机服务（如 Facebook 和 Google） 获�
 
 现在需要让 Microsoft Word 知道在哪里可以找到外接程序。
 
-1. 创建网络共享，或[将文件夹共享到网络](https://technet.microsoft.com/en-us/library/cc770880.aspx)。
+1. 创建网络共享，或[将文件夹共享到网络](https://technet.microsoft.com/zh-cn/library/cc770880.aspx)。
 2. 将 Office-Add-in-OAuth.io.xml 清单文件从项目根目录复制到共享文件夹。
 3. 启动 Word，然后打开一个文档。
 4. 选择**文件**选项卡，然后选择**选项**。
@@ -114,7 +116,7 @@ OAuth.io 服务简化了从热门联机服务（如 Facebook 和 Google） 获�
 2. 在 Word 2016 中的“**插入**”选项卡上，选择“**我的外接程序**”。
 3. 选择“**共享文件夹**”选项卡。
 4. 选择“**使用 OAuthIO 进行身份验证**”，然后选择“**确定**”。
-5. 如果你的 Word 版本支持外接程序命令，那么 UI 会通知你此外接程序已加载。
+5. 如果 Word 版本支持外接程序命令，UI 将通知你已加载外接程序。
 6. 主页功能区上有一个名为“**OAuth.io**”的新组，包含标记为“**显示**”的按钮和一个图标。单击该按钮，打开此外接程序。
 
  > 注意：如果你的 Word 版本不支持外接程序命令，则外接程序将在任务窗格中加载。
@@ -134,11 +136,11 @@ OAuth.io 服务简化了从热门联机服务（如 Facebook 和 Google） 获�
 
 ## <a name="additional-resources"></a>其他资源
 
-* 
-  [Office 外接程序文档](https://msdn.microsoft.com/en-us/library/office/jj220060.aspx)
+* 
+  [Office 外接程序文档](https://msdn.microsoft.com/zh-cn/library/office/jj220060.aspx)
 * [Office 开发人员中心](http://dev.office.com/)
 * 有关更多 Office 外接程序示例，请访问 [Github 上的 OfficeDev](https://github.com/officedev)。
 
-## <a name="copyright"></a>版权
+## <a name="copyright"></a>版权信息
 版权所有 (c) 2017 Microsoft Corporation。保留所有权利。
 

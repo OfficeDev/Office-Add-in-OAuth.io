@@ -1,4 +1,6 @@
-# <a name="office-add-in-that-uses-the-oauthio-service-to-get-authorization-to-external-services"></a>Office-Add-In, das den OAuth.io-Dienst zur Autorisierung bei externen Diensten nutzt
+# <a name="archived-office-add-in-that-uses-the-oauthio-service-to-get-authorization-to-external-services"></a>[ARCHIVERT] Office-Add-In, das den OAuth.io-Dienst zur Autorisierung bei externen Diensten nutzt
+
+> **Hinweis:** Dieses Repository wurde archiviert und wird nicht mehr aktualisiert. Das Projekt oder seine Abhängigkeiten enthalten möglicherweise Sicherheitsrisiken. Wenn Sie beabsichtigen, dieses Repository wiederzuverwenden oder darin enthaltenen Code auszuführen, führen Sie bitte zuerst angemessene Sicherheitsprüfungen des Codes oder der Abhängigkeiten durch. Verwenden Sie dieses Projekt nicht als Ausgangspunkt zum Erstellen eines Office-Add-Ins für die Produktionsumgebung. Beginnen Sie die Erstellung von Produktionscode immer mit dem Entwicklungsworkload für Office/SharePoint in Visual Studio oder mit dem [Yeoman-Generator für Office-Add-Ins](https://github.com/OfficeDev/generator-office), und befolgen Sie bei der Entwicklung des Add-Ins die bewährten Methoden für die Sicherheit.
 
 Der Dienst OAuth.io vereinfacht das Abrufen von OAuth 2.0-Zugriffstokens von beliebten Onlinediensten wie Facebook und Google. In diesem Beispiel sehen Sie, wie Sie den Dienst in einem Office-Add-In verwenden können. 
 
@@ -28,8 +30,8 @@ Der Dienst OAuth.io vereinfacht das Abrufen von OAuth 2.0-Zugriffstokens von be
 
 * Ein Konto bei [OAuth.io](https://oauth.io/home)
 * Entwicklerkonten bei [Google](https://developers.google.com/) und [Facebook](https://developers.facebook.com/)
-* Word 2016 für Windows, Build 16.0.6727.1000 oder höher
-* [Node und npm](https://nodejs.org/en/) Das Projekt ist so konfiguriert, dass npm als Paket-Manager und für die Taskausführung verwendet wird. Zudem wird der Lite Server als der Webserver verwendet, der das Add-In während der Entwicklung hostet, sodass das Add-In schnell betriebsbereit ist. Sie können jedoch auch eine andere Taskausführung oder einen anderen Webserver verwenden.
+* Word 2016 für Windows, Build 16.0.6727.1000 oder höher.
+* [Node und npm](https://nodejs.org/en/) Das Projekt ist so konfiguriert, dass npm als Paket-Manager und für die Taskausführung verwendet wird. Zudem wird Lite Server als der Webserver verwendet, der das Add-In während der Entwicklung hostet, sodass das Add-In schnell betriebsbereit ist. Sie können jedoch auch eine andere Taskausführung oder einen anderen Webserver verwenden.
 * [Git Bash](https://git-scm.com/downloads) (Oder ein anderer Git-Client.)
 
 ## <a name="configure-the-project"></a>Konfigurieren des Projekts
@@ -59,7 +61,7 @@ Legen Sie das Zertifikat als vertrauenswürdige Stammzertifizierungsstelle fest.
 
 1. Erstellen Sie in Ihrer [Google-Entwicklerkonsole](https://console.developers.google.com/apis/dashboard) ein Projekt mit dem Namen **Office-Add-In**.
 2. Aktivieren Sie die Google Plus-API für das Projekt. Details hierzu finden Sie in der Google-Hilfe.
-3. Erstellen Sie App-Anmeldeinformationen für das Projekt. Wählen Sie **OAuth client ID** als Anmeldeinformationstyp und **Web application** als Anwendungstyp aus. Tragen Sie als Clientnamen unter **Name** „Office-Add-in-Oauth.io“ ein (sowie den Produktnamen, falls Sie dazu aufgefordert werden).
+3. Erstellen Sie App-Anmeldeinformationen für das Projekt. Wählen Sie die **OAuth-Client-ID** als Anmeldeinformationstyp und **Web-Anwendung** als Anwendungstyp aus. Geben Sie unter **Name** für den Client „Office-Add-in-Oauth.io“ ein (sowie den Produktnamen, falls Sie dazu aufgefordert werden).
 4. Tragen Sie unter **Authorized redirect URIs** die Adresse ```https://oauth.io/auth``` ein.
 5. Kopieren Sie den geheimen Clientschlüssel und die Client-ID, die Ihnen zugewiesen werden.
 
@@ -73,7 +75,7 @@ Legen Sie das Zertifikat als vertrauenswürdige Stammzertifizierungsstelle fest.
 
 1. Erstellen Sie in Ihrem OAuth.io-Dashboard eine App, und notieren Sie sich den **öffentlichen Schlüssel**, den OAuth.io der App zuweist.
 3. Fügen Sie `localhost` zur URL-Whitelist der App hinzu, falls dort noch kein entsprechender Eintrag vorhanden ist.
-2. Fügen Sie **Google Plus** als Anbieter („Provider“) zur App hinzu. Anbieter werden auch als „integrierte API“ bezeichnet („Integrated API“). Tragen Sie die Client-ID und den geheimen Schlüssel ein, die Sie bei der Erstellung des Google-Projekts erhalten haben. Legen Sie anschließend `profile` als **scope** fest. Falls sich die Konfiguration des Anbieters (der integrierten API) in IE nicht speichern lässt, öffnen Sie das OAuth.io-Dashboard in einem anderen Browser.
+2. Fügen Sie **Google Plus** als Anbieter („Provider“) zur App hinzu. Anbieter werden auch als „integrierte API“ bezeichnet („Integrated API“). Tragen Sie die Client-ID und den geheimen Schlüssel ein, die Sie bei der Erstellung des Google-Projekts erstellt haben. Legen Sie anschließend `profile` als **scope** fest. Falls sich die Konfiguration des Anbieters (der integrierten API) in IE nicht speichern lässt, öffnen Sie das OAuth.io-Dashboard in einem anderen Browser.
 3. Wiederholen Sie den vorherigen Schritt für **Facebook**, aber legen Sie `user_about_me` als **scope** fest.
 
 ## <a name="add-the-public-key-to-the-sample-code"></a>Hinzufügen des öffentlichen Schlüssels zum Beispielcode
@@ -84,7 +86,7 @@ Die API `OAuth.initialize` wird in der Datei „popup.js“ aufgerufen. Suchen S
 
 Jetzt müssen Sie Microsoft Word mitteilen, wo es das Add-In finden kann.
 
-1. Erstellen Sie eine Netzwerkfreigabe, oder [Geben Sie einen Ordner im Netzwerk frei](https://technet.microsoft.com/en-us/library/cc770880.aspx).
+1. Erstellen Sie eine Netzwerkfreigabe, oder [Geben Sie einen Ordner im Netzwerk frei](https://technet.microsoft.com/de-de/library/cc770880.aspx).
 2. Kopieren Sie die Manifestdatei „Office-Add-in-OAuth.io.xml“ aus dem Projektstammverzeichnis in den freigegebenen Ordner.
 3. Starten Sie Word, und öffnen Sie ein Dokument.
 4. Klicken Sie auf die Registerkarte **Datei**, und klicken Sie dann auf **Optionen**.
@@ -115,7 +117,7 @@ Jetzt müssen Sie Microsoft Word mitteilen, wo es das Add-In finden kann.
 3. Klicken Sie auf die Registerkarte **FREIGEGEBENER ORDNER**.
 4. Wählen Sie **Auth with OAuthIO** und anschließend **OK** aus.
 5. Wenn Add-In-Befehle von Ihrer Word-Version unterstützt werden, werden Sie in der Benutzeroberfläche darüber informiert, dass das Add-In geladen wurde.
-6. Im Menüband „Start“ finden Sie eine neue Gruppe namens **OAuth.io** mit einer Schaltfläche **Show** und einem Symbol. Klicken Sie auf diese Schaltfläche, um das Add-In zu öffnen.
+6. Im Menüband „Start“ finden Sie eine neue Gruppe namens **OAuth.io** mit der Schaltfläche **Show** und einem Symbol. Klicken Sie auf diese Schaltfläche, um das Add-In zu öffnen.
 
  > Hinweis: Das Add-In wird in einem Aufgabenbereich geladen, wenn Add-In-Befehle von Ihrer Version von Word nicht unterstützt werden.
 
@@ -134,8 +136,8 @@ Fragen zur Microsoft Office 365-Entwicklung sollten in [Stack Overflow](http://s
 
 ## <a name="additional-resources"></a>Zusätzliche Ressourcen
 
-* 
-  [Dokumentation zu Office-Add-Ins](https://msdn.microsoft.com/en-us/library/office/jj220060.aspx)
+* 
+  [Dokumentation zu Office-Add-Ins](https://msdn.microsoft.com/de-de/library/office/jj220060.aspx)
 * [Office Dev Center](http://dev.office.com/)
 * Weitere Office-Add-In-Beispiele unter [OfficeDev auf Github](https://github.com/officedev)
 

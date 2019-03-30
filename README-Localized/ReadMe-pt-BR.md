@@ -1,6 +1,8 @@
-# <a name="office-add-in-that-uses-the-oauthio-service-to-get-authorization-to-external-services"></a>O suplemento do Office que usa o serviço OAuth.io para obter autorização para serviços externos
+# <a name="archived-office-add-in-that-uses-the-oauthio-service-to-get-authorization-to-external-services"></a>[ARQUIVADO] Suplemento do Office que usa o serviço Auth0 para obter autorização para serviços externos
 
-O serviço OAuth.io simplifica o processo de obter tokens de acesso OAuth 2.0 de serviços online populares como o Facebook e o Google. O exemplo a seguir mostra como usá-lo em um suplemento do Office. 
+> **Observação:** Este repositório foi arquivado e não é mais ativamente mantido. Podem existir vulnerabilidades de segurança no projeto ou em suas dependências. Caso pretenda reutilizar ou executar qualquer código deste repositório, certifique-se de executar primeiro verificações de segurança apropriadas no código ou nas dependências. Não use esse projeto como ponto de partida de produção de suplementos do Office. Sempre inicie seu código de produção usando a carga de trabalho de desenvolvimento do Office/SharePoint no Visual Studio ou no [gerador do Yeoman para suplementos do Office](https://github.com/OfficeDev/generator-office) e siga as melhores práticas de segurança ao desenvolver o suplemento.
+
+O serviço OAuth.io simplifica o processo de obter tokens de acesso OAuth 2.0 de serviços online populares, como o Facebook e o Google. O exemplo a seguir mostra como usá-lo em um suplemento do Office. 
 
 ## <a name="table-of-contents"></a>Sumário
 * [Histórico de Alterações](#change-history)
@@ -84,7 +86,7 @@ A API `OAuth.initialize` é chamada no arquivo popup.js. Localize a linha e pass
 
 Agora, você precisa informar ao Microsoft Word onde encontrar o suplemento.
 
-1. Crie um compartilhamento de rede ou [compartilhe uma pasta na rede](https://technet.microsoft.com/en-us/library/cc770880.aspx).
+1. Crie um compartilhamento de rede ou [compartilhe uma pasta na rede](https://technet.microsoft.com/pt-br/library/cc770880.aspx).
 2. Coloque uma cópia do arquivo de manifesto Office-Add-in-OAuth.io.xml na raiz do projeto, dentro da pasta compartilhada.
 3. Inicie o Word e abra um documento.
 4. Escolha a guia **Arquivo** e escolha **Opções**.
@@ -92,7 +94,7 @@ Agora, você precisa informar ao Microsoft Word onde encontrar o suplemento.
 6. Escolha **Catálogos de Suplementos Confiáveis**.
 7. No campo **URL do Catálogo**, insira o caminho de rede para o compartilhamento de pasta que contém o arquivo Office-Add-in-OAuth.io.xml e escolha **Adicionar catálogo**.
 8. Selecione a caixa de seleção **Mostrar no Menu** e, em seguida, escolha **OK**.
-9. O sistema exibirá uma mensagem para informá-lo de que suas configurações serão aplicadas na próxima vez que você iniciar o Microsoft Office. Feche o Word.
+9. O sistema exibirá uma mensagem para informar que suas configurações serão aplicadas na próxima vez que você iniciar o Microsoft Office. Feche o Word.
 
 ## <a name="run-the-project"></a>Executar o projeto
 
@@ -115,7 +117,7 @@ Agora, você precisa informar ao Microsoft Word onde encontrar o suplemento.
 3. Escolha a guia **PASTA COMPARTILHADA**.
 4. Escolha **Autenticar com OAuthIO**e selecione **OK**.
 5. Se os comandos de suplemento forem compatíveis com sua versão do Word, a interface do usuário informará que o suplemento foi carregado.
-6. Na Faixa de Opções da Página Inicial, há um novo grupo chamado **OAuth.io** com um botão **Mostrar** e um ícone. Clique no botão para abrir o suplemento.
+6. Na Faixa de Opções da Página Inicial, há um novo grupo chamado **OAuth.io** com um botão **Exibir** e um ícone. Clique no botão para abrir o suplemento.
 
  > Observação: O suplemento será carregado no painel de tarefas se os comandos de suplemento não forem compatíveis com sua versão do Word.
 
@@ -128,14 +130,14 @@ Agora, você precisa informar ao Microsoft Word onde encontrar o suplemento.
 
 ## <a name="questions-and-comments"></a>Perguntas e comentários
 
-Gostaríamos de saber sua opinião sobre este exemplo. Você pode nos enviar comentários na seção *Issues* deste repositório.
+Gostaríamos de saber sua opinião sobre este exemplo. Você pode nos enviar comentários na seção *Problemas* deste repositório.
 
 As perguntas sobre o desenvolvimento do Microsoft Office 365 em geral devem ser postadas no [Stack Overflow](http://stackoverflow.com/questions/tagged/office-js+API). Se sua pergunta estiver relacionada às APIs JavaScript para Office, não deixe de marcá-la com as tags [office-js] e [API].
 
 ## <a name="additional-resources"></a>Recursos adicionais
 
-* 
-  [Documentação dos suplementos do Office](https://msdn.microsoft.com/en-us/library/office/jj220060.aspx)
+* 
+  [Documentação dos suplementos do Office](https://msdn.microsoft.com/pt-br/library/office/jj220060.aspx)
 * [Centro de Desenvolvimento do Office](http://dev.office.com/)
 * Confira outros exemplos de Suplemento do Office em [OfficeDev no Github](https://github.com/officedev)
 

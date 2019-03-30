@@ -1,4 +1,6 @@
-# <a name="office-add-in-that-uses-the-oauthio-service-to-get-authorization-to-external-services"></a>使用 OAuth.io 服務以取得外部服務驗證的 Office 增益集
+# <a name="archived-office-add-in-that-uses-the-oauthio-service-to-get-authorization-to-external-services"></a>[已封存] 使用 OAuth.io 服務以取得外部服務驗證的 Office 增益集
+
+> **注意：** 此 Repo 已封存，不再主動進行維護。 安全性漏洞可能存在專案或其相依專案。 如果您計畫重複使用或執行此Repo 的任何程式碼，請務必對程式碼或其相依程式碼執行適當的安全性檢查。 請勿將此專案當成實際 Office 增益集的起點。 一律使用 Visual Studio 中的 Office/SharePoint 開發工作負載，或是使用 [Office 增益集的 Yeoman 產生器](https://github.com/OfficeDev/generator-office)，開始您的實際程式碼，然後在開發增益集的同時，遵循最佳安全性的作法。
 
 OAuth.io 服務可以簡化從受歡迎的線上服務 (例如 Facebook 和 Google)，取得 OAuth 2.0 存取權杖的程序。這個範例會示範如何在 Office 增益集中使用 OAuth.io 服務。 
 
@@ -84,7 +86,7 @@ OAuth.io 服務可以簡化從受歡迎的線上服務 (例如 Facebook 和 Goog
 
 現在，您需要讓 Microsoft Word 知道哪裡可以找到此增益集。
 
-1. 建立網路共用，或 [在網路上共用資料夾](https://technet.microsoft.com/en-us/library/cc770880.aspx)。
+1. 建立網路共用，或 [在網路上共用資料夾](https://technet.microsoft.com/zh-tw/library/cc770880.aspx)。
 2. 將一份 Office-Add-in-OAuth.io.xml 資訊清單檔，從專案的根目錄放入共用資料夾中。
 3. 啟動 Word 並開啟一個文件。
 4. 選擇 [檔案]**** 索引標籤，然後選擇 [選項]****。
@@ -97,7 +99,7 @@ OAuth.io 服務可以簡化從受歡迎的線上服務 (例如 Facebook 和 Goog
 ## <a name="run-the-project"></a>執行專案
 
 1. 開啟專案的資料夾中節點的命令視窗，並執行 ```npm start``` 以啟動 Web 服務。保留命令視窗開啟。
-2. 開啟 Internet Explorer 或 Edge，並在網址方塊中輸入 ```https://localhost:3000```。如果您未收到與憑證相關的任何警告，請關閉瀏覽器，並繼續進行下面主題為**啟動增益集**的章節。如果您收到憑證不受信任的警告，請繼續執行下列步驟︰
+2. 開啟 Internet Explorer 或 Microsoft Edge，並在網址方塊中輸入 ```https://localhost:3000```。如果您未收到與憑證相關的任何警告，請關閉瀏覽器，並繼續進行下面主題為**啟動增益集**的章節。如果您收到憑證不受信任的警告，請繼續執行下列步驟︰
 3. 儘管有警告，瀏覽器還是可以給予您用以開啟頁面的連結。將其開啟。
 4. 開啟網頁後，在網址列中會有紅色的憑證錯誤訊息。按兩下錯誤。
 5. 選取 [檢視憑證]****。
@@ -128,14 +130,14 @@ OAuth.io 服務可以簡化從受歡迎的線上服務 (例如 Facebook 和 Goog
 
 ## <a name="questions-and-comments"></a>問題和建議
 
-我們很樂於收到您對於此範例的意見反應。您可以在此儲存機制的 *[問題]* 區段中，將您的意見反應傳送給我們。
+我們很樂於收到您對於此範例的意見反應。您可以在此存放庫的 [問題]** 區段中，將您的意見反應傳送給我們。
 
 請在 [Stack Overflow](http://stackoverflow.com/questions/tagged/office-js+API) 提出有關 Microsoft Office 365 開發的一般問題。如果您的問題是關於 Office JavaScript API，請確定您的問題標記有 [office js] 與 [API]。
 
 ## <a name="additional-resources"></a>其他資源
 
-* 
-  [Office 增益集文件](https://msdn.microsoft.com/en-us/library/office/jj220060.aspx)
+* 
+  [Office 增益集文件](https://msdn.microsoft.com/zh-tw/library/office/jj220060.aspx)
 * [Office 開發人員中心](http://dev.office.com/)
 * 在 [Github 上的 OfficeDev](https://github.com/officedev) 中有更多 Office 增益集範例
 
